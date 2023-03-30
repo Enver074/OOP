@@ -2,6 +2,7 @@ package Сalculator.Real.MathActions;
 
 import java.io.IOException;
 
+import Сalculator.Logger;
 import Сalculator.Menu;
 import Сalculator.Abstract.CalcModelReal;
 
@@ -13,13 +14,14 @@ public class DivActReal extends CalcModelReal{
 
     @Override
     public int result() throws IOException {
-        try {
+        try{
             return x / y;
-        }
+            }
         catch (ArithmeticException e){
-            System.out.println("Деление на ноль");
-        }
-        return Menu.menuReal();
+                System.out.println("Деление на ноль");
+                Logger.logger(toString());
+            }
+        return Menu.menuReal(); 
     }
 
     @Override
