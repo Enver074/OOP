@@ -2,6 +2,7 @@ package Сalculator.Complex.MathActions;
 
 import java.io.IOException;
 
+import Сalculator.Logger;
 import Сalculator.Menu;
 import Сalculator.Abstract.CalcModelComplex;
 
@@ -18,6 +19,7 @@ public class DivActComplex extends CalcModelComplex{
         }
         catch (ArithmeticException e){
             System.out.println("Деление на ноль");
+            Logger.logger(toString());
         }
         return Menu.menuComplex();
     }
@@ -29,6 +31,7 @@ public class DivActComplex extends CalcModelComplex{
         }
         catch (ArithmeticException e){
             System.out.println("Деление на ноль");
+            Logger.logger(toString());
         }
         return Menu.menuComplex();
         
